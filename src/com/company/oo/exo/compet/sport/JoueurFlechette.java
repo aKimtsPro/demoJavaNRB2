@@ -2,13 +2,13 @@ package com.company.oo.exo.compet.sport;
 
 import java.util.Random;
 
-public class JoueurFlechette extends Sportif {
+public class JoueurFlechette extends Sportif implements Individuel {
     public JoueurFlechette(String nom, String prenom) {
         super(nom, prenom);
     }
 
     @Override
-    public int performer() { // Ca fonctionne ?
+    public int performer() {
         Random rdm = new Random();
         int i = 0;
         int score= 0;
@@ -26,4 +26,9 @@ public class JoueurFlechette extends Sportif {
 
         return score;
     }
+    
+	@Override
+	public void incrementNbrVictoire() {
+		this.setNbrVictoire(getNbrVictoire()+1);
+	}
 }

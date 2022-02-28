@@ -1,5 +1,6 @@
 package com.company.oo.exo.compet;
 
+import com.company.oo.exo.compet.sport.Individuel;
 import com.company.oo.exo.compet.sport.Sportif;
 
 import java.util.HashMap;
@@ -7,10 +8,13 @@ import java.util.Random;
 
 public class Competition {
 
-    private HashMap<Sportif, Integer> participants = new HashMap<>();
+    private HashMap<Individuel, Integer> participants = new HashMap<>();
     private Performance vainqueur;
 
-    boolean inscrire(Sportif aInscrire){
+    boolean inscrire(Individuel aInscrire){
+    	if( !(aInscrire instanceof Sportif) )
+    		return false;
+    	
         if( vainqueur == null && aInscrire != null && !participants.containsKey(aInscrire) ){
             participants.put(aInscrire, 0);
             return true;
@@ -18,7 +22,7 @@ public class Competition {
         return false;
     }
 
-    boolean desinscrire(Sportif aDesinscrire){
+    boolean desinscrire(Individuel aDesinscrire){
         if( vainqueur == null && aDesinscrire != null && participants.containsKey(aDesinscrire) ){
             participants.remove(aDesinscrire);
             return true;
@@ -31,11 +35,11 @@ public class Competition {
         Sportif meilleurSportif = null;
         int scoreMax = 0;
 
-        for (Sportif participant : participants.keySet()) {
+        for (Individuel participant : participants.keySet()) {
             int score = participant.performer();
             participants.put(participant, score);
             if( meilleurSportif == null || scoreMax < score ){
-                meilleurSportif = participant;
+                meilleurSportif = (Sportif)participant;
                 scoreMax = score;
             }
         }

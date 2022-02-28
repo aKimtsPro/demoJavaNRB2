@@ -2,7 +2,7 @@ package com.company.oo.exo.compet.sport;
 
 import java.util.Scanner;
 
-public class Judoka extends Sportif {
+public class Judoka extends Sportif implements Individuel {
 
     private int equilibre;
 
@@ -26,4 +26,9 @@ public class Judoka extends Sportif {
         int tailleNomTech = sc.nextLine().length();
         return tailleNomTech + getEquilibre();
     }
+
+	@Override
+	public void incrementNbrVictoire() {
+		this.setNbrVictoire(getNbrVictoire()+1);
+	}
 }

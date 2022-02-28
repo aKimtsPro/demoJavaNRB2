@@ -2,7 +2,7 @@ package com.company.oo.exo.compet.sport;
 
 import java.util.Random;
 
-public class Marathonnien extends Sportif {
+public class Marathonnien extends Sportif implements Individuel {
 
     private int endurance = 10;
 
@@ -26,4 +26,9 @@ public class Marathonnien extends Sportif {
         int modifier = rdm.nextInt(21) - 10;
         return getEndurance() + modifier;
     }
+
+	@Override
+	public void incrementNbrVictoire() {
+		this.setNbrVictoire(getNbrVictoire()+1);
+	}
 }

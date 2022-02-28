@@ -1,5 +1,6 @@
 package com.company.oo.exo.compet;
 
+import com.company.oo.exo.compet.sport.Individuel;
 import com.company.oo.exo.compet.sport.JoueurFlechette;
 import com.company.oo.exo.compet.sport.Judoka;
 import com.company.oo.exo.compet.sport.Marathonnien;
@@ -12,9 +13,9 @@ public class Main {
         Competition competition = new Competition();
 
         // Et maintenant un nouveau probleme se dévoile
-        Sportif s1 = new Marathonnien("Dudule", "Marc", 71);
-        Sportif s2 = new Judoka("Mondine", "Marie", 5);
-        Sportif s3 = new JoueurFlechette("Polindon", "Dominique");
+        Individuel s1 = new Marathonnien("Dudule", "Marc", 71);
+        Individuel s2 = new Judoka("Mondine", "Marie", 5);
+        Individuel s3 = new JoueurFlechette("Polindon", "Dominique");
 
         System.out.println("--- AVANT LANCEMENT ---\n");
 
