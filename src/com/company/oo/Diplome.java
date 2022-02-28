@@ -6,7 +6,7 @@ public class Diplome {
     private String nom;
     private TypeDiplome type;
 
-    Diplome(){}
+    public Diplome(){}
 
     Diplome(String etablissement, String nom, TypeDiplome type){
         this.etablissement = etablissement;

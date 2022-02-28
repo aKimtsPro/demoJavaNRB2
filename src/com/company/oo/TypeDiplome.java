@@ -1,10 +1,22 @@
 package com.company.oo;
 
-public enum TypeDiplome {
+public enum TypeDiplome{
 
-    BAC,
-    MASTER,
-    DOC,
-    CESS
+    BAC(2),
+    MASTER(3),
+    DOC(4),
+    CESS(1);
+	
+	private final int difficulte;
+
+	private TypeDiplome(int difficulte) {
+		this.difficulte = difficulte;
+	}
+
+	public int getDifficulte() {
+		return difficulte;
+	}
+	
+	
 
 }

@@ -43,7 +43,8 @@ public class Main {
         Employe e = null;
         if( p instanceof Employe )
         	e = (Employe)p;
-
+        
+        d.getType().getDifficulte();
     }
 
 }
