@@ -9,7 +9,7 @@ public class Main {
 		
 		BoiteNourriture<Biscuit> boite = new BoiteNourriture<>();
 		
-		Chocolat c = new Chocolat(80, 40);
+//		Chocolat c = new Chocolat(80, 40);
 		Biscuit b = new Biscuit(50);
 		Biscuit b1 = new Biscuit(30);
 		

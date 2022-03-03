@@ -6,8 +6,8 @@ import java.util.function.Supplier;
 
 import com.company.oo.Animal;
 import com.company.oo.Diplome;
-import com.company.oo.exo.compet.sport.EnEquipe;
-import com.company.oo.exo.compet.sport.Equipe;
+import com.company.oo.exo.sport.equipe.EnEquipe;
+import com.company.oo.exo.sport.equipe.Equipe;
 
 public class Main {
 	

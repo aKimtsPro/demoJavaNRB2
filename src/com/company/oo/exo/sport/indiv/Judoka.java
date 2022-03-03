@@ -1,8 +1,10 @@
-package com.company.oo.exo.compet.sport;
+package com.company.oo.exo.sport.indiv;
 
 import java.util.Scanner;
 
-public class Judoka extends Sportif implements Individuel {
+import com.company.oo.exo.sport.Sportif;
+
+public class Judoka extends SportifIndividuel {
 
     private int equilibre;
 
@@ -26,9 +28,4 @@ public class Judoka extends Sportif implements Individuel {
         int tailleNomTech = sc.nextLine().length();
         return tailleNomTech + getEquilibre();
     }
-
-	@Override
-	public void incrementNbrVictoire() {
-		this.setNbrVictoire(getNbrVictoire()+1);
-	}
 }

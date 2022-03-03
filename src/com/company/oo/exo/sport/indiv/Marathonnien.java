@@ -1,8 +1,10 @@
-package com.company.oo.exo.compet.sport;
+package com.company.oo.exo.sport.indiv;
 
 import java.util.Random;
 
-public class Marathonnien extends Sportif implements Individuel {
+import com.company.oo.exo.sport.Sportif;
+
+public class Marathonnien extends SportifIndividuel {
 
     private int endurance = 10;
 
@@ -26,9 +28,4 @@ public class Marathonnien extends Sportif implements Individuel {
         int modifier = rdm.nextInt(21) - 10;
         return getEndurance() + modifier;
     }
-
-	@Override
-	public void incrementNbrVictoire() {
-		this.setNbrVictoire(getNbrVictoire()+1);
-	}
 }

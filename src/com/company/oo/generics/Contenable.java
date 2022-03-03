@@ -1,7 +1,5 @@
 package com.company.oo.generics;
 
-import java.util.List;
-
 public interface Contenable {
 	
 	int getPoid();

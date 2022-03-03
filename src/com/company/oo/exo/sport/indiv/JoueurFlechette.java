@@ -1,8 +1,10 @@
-package com.company.oo.exo.compet.sport;
+package com.company.oo.exo.sport.indiv;
 
 import java.util.Random;
 
-public class JoueurFlechette extends Sportif implements Individuel {
+import com.company.oo.exo.sport.Sportif;
+
+public class JoueurFlechette extends SportifIndividuel {
     public JoueurFlechette(String nom, String prenom) {
         super(nom, prenom);
     }
@@ -26,9 +28,4 @@ public class JoueurFlechette extends Sportif implements Individuel {
 
         return score;
     }
-    
-	@Override
-	public void incrementNbrVictoire() {
-		this.setNbrVictoire(getNbrVictoire()+1);
-	}
 }

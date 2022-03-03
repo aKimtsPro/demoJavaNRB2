@@ -1,4 +1,4 @@
-package com.company.oo.exo.compet.sport;
+package com.company.oo.exo.sport.indiv;
 
 public interface Individuel{
 	int getNbrVictoire();

@@ -1,6 +1,8 @@
-package com.company.oo.exo.compet.sport;
+package com.company.oo.exo.sport.equipe;
 
-public class JoueurFoot extends Sportif implements EnEquipe {
+import java.util.Random;
+
+public class JoueurFoot extends SportifEnEquipe {
 	
 	private int nbrGoal;
 	private Equipe equipe;
@@ -16,15 +18,7 @@ public class JoueurFoot extends Sportif implements EnEquipe {
 
 	@Override
 	public int performer() {
-		return 0;
-	}
-
-	public Equipe getEquipe() {
-		return equipe;
-	}
-
-	public void setEquipe(Equipe equipe) {
-		this.equipe = equipe;
+		return new Random().nextInt(3);
 	}
 	
 	public int scoreGoal() {

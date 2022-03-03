@@ -1,4 +1,4 @@
-package com.company.oo.exo.compet.sport;
+package com.company.oo.exo.sport;
 
 import com.company.oo.exo.compet.Performance;
 
@@ -35,7 +35,7 @@ public abstract class Sportif {
         return nbrVictoire;
     }
 
-    public void setNbrVictoire(int nbrVictoire) {
+    protected void setNbrVictoire(int nbrVictoire) {
         this.nbrVictoire = nbrVictoire;
     }
 }

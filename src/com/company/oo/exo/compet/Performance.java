@@ -1,14 +1,30 @@
 package com.company.oo.exo.compet;
 
-import com.company.oo.exo.compet.sport.Sportif;
-
 public class Performance {
 
-    Sportif sportif;
-    int score;
+    private Competiteur competiteur;
+    private int score;
 
-    public Performance(Sportif sportif, int score) {
-        this.sportif = sportif;
+    public Performance(Competiteur competiteur, int score) {
+        this.competiteur = competiteur;
         this.score = score;
     }
+
+	public Competiteur getCompetiteur() {
+		return competiteur;
+	}
+
+	public void setCompetiteur(Competiteur competiteur) {
+		this.competiteur = competiteur;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+    
+    
 }

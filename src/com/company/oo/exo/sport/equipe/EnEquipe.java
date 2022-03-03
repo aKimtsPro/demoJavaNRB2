@@ -1,4 +1,4 @@
-package com.company.oo.exo.compet.sport;
+package com.company.oo.exo.sport.equipe;
 
 public interface EnEquipe {
 	Equipe getEquipe();
