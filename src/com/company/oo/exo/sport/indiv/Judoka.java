@@ -2,8 +2,6 @@ package com.company.oo.exo.sport.indiv;
 
 import java.util.Scanner;
 
-import com.company.oo.exo.sport.Sportif;
-
 public class Judoka extends SportifIndividuel {
 
     private int equilibre;

@@ -2,8 +2,6 @@ package com.company.oo.exo.sport.indiv;
 
 import java.util.Random;
 
-import com.company.oo.exo.sport.Sportif;
-
 public class Marathonnien extends SportifIndividuel {
 
     private int endurance = 10;

@@ -1,7 +1,5 @@
 package com.company.oo.exo.sport;
 
-import com.company.oo.exo.compet.Performance;
-
 public abstract class Sportif {
 
     private String nom;

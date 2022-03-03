@@ -2,7 +2,6 @@ package com.company.oo.exo.sport.indiv;
 
 import java.util.Random;
 
-import com.company.oo.exo.sport.Sportif;
 
 public class JoueurFlechette extends SportifIndividuel {
     public JoueurFlechette(String nom, String prenom) {

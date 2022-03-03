@@ -5,8 +5,9 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import com.company.oo.exo.compet.Competiteur;
+import com.company.oo.exo.sport.Sportif;
 
-public class Equipe<T extends SportifEnEquipe> implements Competiteur{
+public class Equipe<T extends EnEquipe<T>> implements Competiteur{
 
 	private String nom;
 	private final Set<T> joueurs = new HashSet<>();
@@ -21,6 +22,10 @@ public class Equipe<T extends SportifEnEquipe> implements Competiteur{
 	}
 
 	public boolean add(T toAdd) {
+		
+		if( !(toAdd instanceof Sportif) )
+			return false;
+			
 		if( joueurs.add(toAdd) ) {
 			toAdd.setEquipe(this);
 			return true;
