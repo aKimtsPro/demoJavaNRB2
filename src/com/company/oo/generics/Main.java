@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		BoiteNourriture<Biscuit> boite = new BoiteNourriture<>();
+		BoiteNourriture<Biscuit> boite = new BoiteNourriture<>(100000);
 		
 //		Chocolat c = new Chocolat(80, 40);
 		Biscuit b = new Biscuit(50);
