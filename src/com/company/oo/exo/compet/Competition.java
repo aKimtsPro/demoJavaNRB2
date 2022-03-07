@@ -27,7 +27,7 @@ public class Competition<T extends Competiteur> {
 
     public boolean inscrire(T aInscrire){
 
-    	if(isFinished())
+    	if(estTermine())
     		throw new InvalidCompetionStateException(true);
     	
         if( aInscrire != null && !participants.containsKey(aInscrire) ){
@@ -40,7 +40,7 @@ public class Competition<T extends Competiteur> {
 
     public boolean desinscrire(T aDesinscrire){
 
-    	if(isFinished())
+    	if(estTermine())
     		throw new InvalidCompetionStateException(true);
     	
         if(aDesinscrire != null && participants.containsKey(aDesinscrire) ){
@@ -53,7 +53,7 @@ public class Competition<T extends Competiteur> {
 
     public Performance lancer(){
     	
-    	if(isFinished())
+    	if(estTermine())
     		throw new InvalidCompetionStateException(true);
     	
     	if(participants.size() == 0)
@@ -79,14 +79,14 @@ public class Competition<T extends Competiteur> {
     protected void onFinish() {}
 
     public Performance getVainqueur() {
-    	if( !isFinished() )
+    	if( !estTermine() )
     		throw new InvalidCompetionStateException(false);
     	
         return vainqueur;
     }
     
     public Performance getWorstPerformance() {
-    	if( !isFinished() )
+    	if( !estTermine() )
     		throw new InvalidCompetionStateException(false);
     	
 //    	return participants.keySet().stream()
